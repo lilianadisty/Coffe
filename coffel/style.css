@@ -59,7 +59,7 @@ img {
 .section-content {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: auto;
+  max-width: var(--site-max-widht);
 }
 
 header {
