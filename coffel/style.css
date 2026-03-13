@@ -346,6 +346,7 @@ header .navbar {
 }
 
 .testimonials-section .swiper-slide-button {
+  margin-top: -50px;
   color: var(--secondary-color);
   transition: 0.3s ease;
 }
@@ -374,7 +375,7 @@ header .navbar {
   }
 
   body.show-mobile-menu header::before {
-    content: "😽🥹";
+    content: "";
     position: fixed;
     left: 0;
     top: 0;
@@ -420,6 +421,7 @@ header .navbar {
 
   body.show-mobile-menu .navbar .nav-menu {
     left: 0;
+    top: 0;
   }
 
   .navbar .nav-menu .nav-link {
@@ -485,4 +487,14 @@ header .navbar {
   .menu-section .menu-list .menu-item {
     width: 100%;
   }
+
+  .testimonials-section .slider-wrapper {
+    margin: 0 0 30px;
+  }
+
+  .testimonials-section .swiper-slide-button {
+    display: none;
+  }
 }
+
+/*. galery 52.33. https://www.youtube.com/watch?v=MYFgtnKMDp4&t=1548s*/
