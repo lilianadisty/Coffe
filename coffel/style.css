@@ -34,8 +34,8 @@
   --border-radius-m: 30px;
   --border-radius-circle: 50%;
 
-  /* Site max widht*/
-  --site-max-widht: 1300px;
+  /* Site max width*/
+  --site-max-width: 1300px;
 }
 
 ul {
@@ -59,7 +59,7 @@ img {
 .section-content {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: var(--site-max-widht);
+  max-width: var(--site-max-width);
 }
 
 .section-title {
@@ -165,13 +165,25 @@ header .navbar {
 }
 
 .hero-section .hero-details .button {
-  padding: 10px 26px;
+  /* padding: 10px 26px;
   border: 2px solid transparent;
   color: var(--primary-color);
   border-radius: var(--border-radius-m);
   background: var(--secondary-color);
   font-weight: var(--font-weight-medium);
-  transition: 0.3s ease;
+  transition: 0.3s ease; */
+  padding: 10px 26px;
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  transition: all 1s ease;
+}
+
+.hero-section .hero-details .button:hover {
+  transform: scale(1.05);
+}
+
+.hero-section .hero-details .button:active {
+  transform: scale(0.95);
 }
 
 .hero-section .hero-details .button:hover,
@@ -222,7 +234,7 @@ header .navbar {
 
 .about-section .about-details .text {
   line-height: 30px;
-  margin: 50px 0 30 px;
+  margin: 50px 0 30px;
   text-align: center;
   font-size: var(--font-size-m);
 }
@@ -273,6 +285,13 @@ header .navbar {
   margin-bottom: 15px;
   object-fit: contain;
 }
+.menu-section .menu-list .menu-item .menu-image {
+  transition: transform 0.4s ease;
+}
+
+.menu-section .menu-list .menu-item:hover .menu-image {
+  transform: scale(1.1);
+}
 
 .menu-section .menu-list .menu-item .name {
   margin: 12px 0;
@@ -284,8 +303,57 @@ header .navbar {
   font-size: var(--font-size-m);
 }
 
-/* Responsive media query code for max width 1024px*/
+/* Testimonials section styling */
+.testimonials-section {
+  padding: 50px 0 100px;
+  background: var(--light-pink-color);
+}
 
+.testimonials-section .slider-wrapper {
+  overflow: hidden;
+  margin: 0 60px 50px;
+}
+
+.testimonials-section .testimonial {
+  display: flex;
+  padding: 35px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials-section .testimonial .user-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 50px;
+  border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name {
+  margin-bottom: 16px;
+  font-size: var(--font-size-m);
+}
+
+.testimonials-section .testimonial .feedback {
+  line-height: 25px;
+}
+
+.testimonials-section .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background: var(--secondary-color);
+}
+
+.testimonials-section .swiper-slide-button {
+  color: var(--secondary-color);
+  transition: 0.3s ease;
+}
+.testimonials-section .swiper-slide-button:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive media query code for max width 1024px*/
 @media screen and (max-width: 1024px) {
   .menu-section .menu-list {
     gap: 60px;
@@ -306,7 +374,7 @@ header .navbar {
   }
 
   body.show-mobile-menu header::before {
-    content: "";
+    content: "😽🥹";
     position: fixed;
     left: 0;
     top: 0;
@@ -314,6 +382,10 @@ header .navbar {
     width: 100%;
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.2);
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar :where(#menu-close-button, #menu-open-button) {
